@@ -124,15 +124,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         items.append(item)
                     }
                     ///// старый код
-//                    let itemArray = ItemArray()
-//                    itemArray.addAll(array: self.loadItems())
-//                    for item in items {
-//                        itemArray.add(item)
-//                    }
-//                    self.saveItems(itemArray: itemArray.arr)
+                    let itemArray = ItemArray()
+                    itemArray.addAll(array: self.loadItems())
+                    for item in items {
+                        itemArray.add(item)
+                    }
+                    self.saveItems(itemArray: itemArray.arr)
                     //// новый код
 
-                    self.saveItems(itemArray: items)
+//                    self.saveItems(itemArray: items)
                     
                 }
                 
@@ -142,7 +142,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
         self.lastPage = self.nextPage
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
     
     }
     
@@ -165,7 +165,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             dbItem.value(forKey: "imageLink")
             items.append(dbItem)
-//            tableView.reloadData()
+            tableView.reloadData()
         }
     }
 }
@@ -193,10 +193,10 @@ extension MainViewController {
         cell.textLabel?.numberOfLines = 0
         cell.accessoryType = .detailButton
         print("index \(indexPath.row)")
-        let item = tableData[indexPath.row]
-        cell.textLabel?.text = item.title
-//        let item = self.items[indexPath.row]
-//        cell.textLabel?.text = item.value(forKey: "title") as? String
+//        let item = tableData[indexPath.row]
+//        cell.textLabel?.text = item.title
+        let item = self.items[indexPath.row]
+        cell.textLabel?.text = item.value(forKey: "title") as? String
         lastRowAtPage = indexPath.row
         return cell
     }
