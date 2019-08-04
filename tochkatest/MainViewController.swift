@@ -24,7 +24,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dbOperations.deleteAllEntities() // Удаление записей из базы, чтобы проверить заполнение tableView из базы
+//        dbOperations.deleteAllEntities() // Удаление записей из базы, чтобы проверить заполнение tableView из базы
         setupTableData()
         setupUI()
         setupFetchedResultsController()

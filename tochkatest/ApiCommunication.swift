@@ -25,8 +25,7 @@ class ApiComunication {
         
         let task = URLSession.shared.dataTask(with: request) {
             (data, response, error) in
-            let json: String = String(data: data!, encoding: String.Encoding.utf8)!
-            print("JSON: ", json)
+
             guard error == nil else {
                 print(error?.localizedDescription ?? "no desc")
                 return
@@ -35,13 +34,16 @@ class ApiComunication {
                 activityView.startAnimating()
             }
             guard let data = data else {
-                activityView.stopAnimating()
                 return
             }
-            guard let newsInfo = try? JSONDecoder().decode(JsonResponse.self, from: data) else {
-                activityView.stopAnimating()
+            
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .millisecondsSince1970
+            guard let newsInfo = try? decoder.decode(JsonResponse.self, from: data) else {
+                print("Cant't parse json")
                 return
             }
+            print(newsInfo.articles)
             DispatchQueue.main.async {
                 let dbOperations = DBOperations()
                 if (newsInfo.articles.count == 0) {
