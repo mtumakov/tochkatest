@@ -24,8 +24,8 @@ class DBOperations {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         let fetchedResults: [NSManagedObject]?
         
-        let titleSortDescriptor = NSSortDescriptor(key: "title", ascending: true)
-        fetchRequest.sortDescriptors = [titleSortDescriptor]
+        let timeSortDescriptor = NSSortDescriptor(key: "time", ascending: false)
+        fetchRequest.sortDescriptors = [timeSortDescriptor]
         
         if let text = searchText {
             let predicate = NSPredicate(format: "title contains[c] %@", text)
@@ -40,7 +40,9 @@ class DBOperations {
                     let item = Item(title: iter.value(forKey: "title") as! String,
                                     description: iter.value(forKey: "content") as! String,
                                     urlToImage: iter.value(forKey: "urlToImage") as? URL,
-                                    publishedAt: iter.value(forKey: "publishedAt") as! Date)
+                                    at: iter.value(forKey: "publishedAt") as! String,
+                                    time: iter.value(forKey: "time") as? Double)
+                    print(item)
                     resultArray.append(item)
                 }
             } else {
@@ -64,6 +66,8 @@ class DBOperations {
                         dbItem.setValue(item.title, forKey: "title")
                         dbItem.setValue(item.description, forKey: "content")
                         dbItem.setValue(item.urlToImage, forKey: "urlToImage")
+                        dbItem.setValue(item.publishedAt, forKey: "publishedAt")
+                        dbItem.setValue(item.getDate(from: item.publishedAt), forKey: "time")
                         try managedContext.save()
                     }
                 }
