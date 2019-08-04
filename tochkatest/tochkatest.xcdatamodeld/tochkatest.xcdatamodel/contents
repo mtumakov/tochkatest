@@ -2,10 +2,15 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DbItem" representedClassName="DbItem" syncable="YES" codeGenerationType="class">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="imageLink" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="publishedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="urlToImage" optional="YES" attributeType="URI" syncable="YES"/>
+    </entity>
+    <entity name="Result" representedClassName="Result" syncable="YES" codeGenerationType="class">
+        <attribute name="totalResults" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DbItem" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="DbItem" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Result" positionX="-36" positionY="27" width="128" height="60"/>
     </elements>
 </model>

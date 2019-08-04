@@ -11,12 +11,12 @@
 		91575BDF22EAF97E0096954B /* tochkatest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91575BDD22EAF97E0096954B /* tochkatest.xcdatamodeld */; };
 		91575BE122EAF97F0096954B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91575BE022EAF97F0096954B /* Assets.xcassets */; };
 		91575BE422EAF97F0096954B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91575BE222EAF97F0096954B /* LaunchScreen.storyboard */; };
-		91575BEC22EAFB780096954B /* HTTPCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BEB22EAFB780096954B /* HTTPCommunication.swift */; };
 		91575BEE22EAFC780096954B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BED22EAFC780096954B /* MainViewController.swift */; };
 		91575BF022EB13970096954B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BEF22EB13970096954B /* Item.swift */; };
 		91575BF222EB317D0096954B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BF122EB317D0096954B /* TableViewCell.swift */; };
 		91575BF422EDE4010096954B /* DBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BF322EDE4010096954B /* DBOperations.swift */; };
 		91575BF622EF52280096954B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BF522EF52280096954B /* DetailViewController.swift */; };
+		91575BFA22F21C470096954B /* ApiCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BF922F21C470096954B /* ApiCommunication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +26,12 @@
 		91575BE022EAF97F0096954B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91575BE322EAF97F0096954B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91575BE522EAF97F0096954B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91575BEB22EAFB780096954B /* HTTPCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCommunication.swift; sourceTree = "<group>"; };
 		91575BED22EAFC780096954B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		91575BEF22EB13970096954B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		91575BF122EB317D0096954B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		91575BF322EDE4010096954B /* DBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBOperations.swift; sourceTree = "<group>"; };
 		91575BF522EF52280096954B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		91575BF922F21C470096954B /* ApiCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCommunication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +69,12 @@
 				91575BE222EAF97F0096954B /* LaunchScreen.storyboard */,
 				91575BE522EAF97F0096954B /* Info.plist */,
 				91575BDD22EAF97E0096954B /* tochkatest.xcdatamodeld */,
-				91575BEB22EAFB780096954B /* HTTPCommunication.swift */,
 				91575BED22EAFC780096954B /* MainViewController.swift */,
 				91575BEF22EB13970096954B /* Item.swift */,
 				91575BF122EB317D0096954B /* TableViewCell.swift */,
 				91575BF322EDE4010096954B /* DBOperations.swift */,
 				91575BF522EF52280096954B /* DetailViewController.swift */,
+				91575BF922F21C470096954B /* ApiCommunication.swift */,
 			);
 			path = tochkatest;
 			sourceTree = "<group>";
@@ -154,8 +154,8 @@
 				91575BD722EAF97E0096954B /* AppDelegate.swift in Sources */,
 				91575BDF22EAF97E0096954B /* tochkatest.xcdatamodeld in Sources */,
 				91575BF222EB317D0096954B /* TableViewCell.swift in Sources */,
-				91575BEC22EAFB780096954B /* HTTPCommunication.swift in Sources */,
 				91575BEE22EAFC780096954B /* MainViewController.swift in Sources */,
+				91575BFA22F21C470096954B /* ApiCommunication.swift in Sources */,
 				91575BF622EF52280096954B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

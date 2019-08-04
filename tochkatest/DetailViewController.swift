@@ -43,7 +43,7 @@ class DetailViewController: UIViewController {
         
         let image = UIImageView()
         imageView.addSubview(image)
-        image.downloaded(from: item?.imageLink)
+        image.downloaded(from: (item?.urlToImage!)!)
         
         image.fillSuperview()
         image.alignmentRect(forFrame: imageView.frame)
@@ -60,10 +60,10 @@ class DetailViewController: UIViewController {
         titleView.anchor(top: imageView.topAnchor, leading: scrollView.safeAreaLayoutGuide.leadingAnchor,
                          bottom: nil, trailing: imageView.leadingAnchor,
                          padding: .init(top: 0, left: 0, bottom: 0, right: 16))
-        
+
         contentView.anchor(top: imageView.bottomAnchor, leading: scrollView.safeAreaLayoutGuide.leadingAnchor,
                           bottom: scrollView.bottomAnchor, trailing: scrollView.trailingAnchor,
-                          padding: .init(top: 16, left: 0, bottom: 0, right: 0))
+                          padding: .init(top: 48, left: 0, bottom: 0, right: 0))
         
         contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
 
@@ -72,7 +72,7 @@ class DetailViewController: UIViewController {
         titleView.numberOfLines = 0
         
         contentView.textAlignment = .natural
-        contentView.text = item?.content
+        contentView.text = item?.description
         contentView.numberOfLines = 0
     }
     

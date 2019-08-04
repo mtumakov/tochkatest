@@ -8,45 +8,16 @@
 
 import Foundation
 
-struct Item {
+struct Item: Decodable {
     let title: String
-    let content: String
-    let imageLink: String?
+    let description: String
+    let urlToImage: URL?
+    let publishedAt: Date
     
-    init(title: String, content: String, imageLink: String? = nil) {
+    init(title: String, description: String, urlToImage: URL?, publishedAt: Date) {
         self.title = title
-        self.content = content
-        self.imageLink = imageLink
-    }
-}
-
-class ItemArray {
-    var arr: [Item]
-    
-    init(arr: [Item] = []) {
-        self.arr = arr
-    }
-    
-    public func add(_ item: Item) {
-        for (index, element) in arr.enumerated() {
-            if (element.title == item.title) {
-                arr.remove(at: index)
-            }
-        }
-        arr.append(item)
-    }
-    
-    public func addAll(array: [Item]) {
-        for item in array {
-            add(item)
-        }
-    }
-    
-    public func remove(with title: String) {
-        for (index, element) in arr.enumerated() {
-            if element.title == title {
-                arr.remove(at: index)
-            }
-        }
+        self.description = description
+        self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
     }
 }
