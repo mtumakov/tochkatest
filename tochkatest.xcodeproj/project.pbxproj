@@ -3,28 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		91575BD722EAF97E0096954B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BD622EAF97E0096954B /* AppDelegate.swift */; };
 		91575BDF22EAF97E0096954B /* tochkatest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91575BDD22EAF97E0096954B /* tochkatest.xcdatamodeld */; };
 		91575BE122EAF97F0096954B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91575BE022EAF97F0096954B /* Assets.xcassets */; };
-		91575BE422EAF97F0096954B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91575BE222EAF97F0096954B /* LaunchScreen.storyboard */; };
 		91575BEE22EAFC780096954B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BED22EAFC780096954B /* MainViewController.swift */; };
 		91575BF022EB13970096954B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BEF22EB13970096954B /* Item.swift */; };
 		91575BF222EB317D0096954B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BF122EB317D0096954B /* TableViewCell.swift */; };
 		91575BF422EDE4010096954B /* DBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BF322EDE4010096954B /* DBOperations.swift */; };
 		91575BF622EF52280096954B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BF522EF52280096954B /* DetailViewController.swift */; };
 		91575BFA22F21C470096954B /* ApiCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91575BF922F21C470096954B /* ApiCommunication.swift */; };
+		91D928C9237054F50025399C /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D928C8237054F50025399C /* NewsApi.swift */; };
+		E426F9C67781096339F90BA1 /* Pods_tochkatest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9115DC63EF63DA96CDD2 /* Pods_tochkatest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149B9115DC63EF63DA96CDD2 /* Pods_tochkatest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tochkatest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91575BD322EAF97E0096954B /* tochkatest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tochkatest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91575BD622EAF97E0096954B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91575BDE22EAF97E0096954B /* tochkatest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tochkatest.xcdatamodel; sourceTree = "<group>"; };
 		91575BE022EAF97F0096954B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		91575BE322EAF97F0096954B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91575BE522EAF97F0096954B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91575BED22EAFC780096954B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		91575BEF22EB13970096954B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -32,6 +33,9 @@
 		91575BF322EDE4010096954B /* DBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBOperations.swift; sourceTree = "<group>"; };
 		91575BF522EF52280096954B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		91575BF922F21C470096954B /* ApiCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCommunication.swift; sourceTree = "<group>"; };
+		91D928C8237054F50025399C /* NewsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApi.swift; sourceTree = "<group>"; };
+		D74340C5E1C92212402D2F3F /* Pods-tochkatest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tochkatest.debug.xcconfig"; path = "Target Support Files/Pods-tochkatest/Pods-tochkatest.debug.xcconfig"; sourceTree = "<group>"; };
+		E082D3888F5AB76117AF60BD /* Pods-tochkatest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tochkatest.release.xcconfig"; path = "Target Support Files/Pods-tochkatest/Pods-tochkatest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E426F9C67781096339F90BA1 /* Pods_tochkatest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03A2F4F39A6D8B7E8226FC51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D74340C5E1C92212402D2F3F /* Pods-tochkatest.debug.xcconfig */,
+				E082D3888F5AB76117AF60BD /* Pods-tochkatest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		91575BCA22EAF97E0096954B = {
 			isa = PBXGroup;
 			children = (
 				91575BD522EAF97E0096954B /* tochkatest */,
 				91575BD422EAF97E0096954B /* Products */,
+				03A2F4F39A6D8B7E8226FC51 /* Pods */,
+				A341435CDF6E5FDD3F25B8E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +82,6 @@
 			children = (
 				91575BD622EAF97E0096954B /* AppDelegate.swift */,
 				91575BE022EAF97F0096954B /* Assets.xcassets */,
-				91575BE222EAF97F0096954B /* LaunchScreen.storyboard */,
 				91575BE522EAF97F0096954B /* Info.plist */,
 				91575BDD22EAF97E0096954B /* tochkatest.xcdatamodeld */,
 				91575BED22EAFC780096954B /* MainViewController.swift */,
@@ -75,8 +90,17 @@
 				91575BF322EDE4010096954B /* DBOperations.swift */,
 				91575BF522EF52280096954B /* DetailViewController.swift */,
 				91575BF922F21C470096954B /* ApiCommunication.swift */,
+				91D928C8237054F50025399C /* NewsApi.swift */,
 			);
 			path = tochkatest;
+			sourceTree = "<group>";
+		};
+		A341435CDF6E5FDD3F25B8E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				149B9115DC63EF63DA96CDD2 /* Pods_tochkatest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91575BE822EAF97F0096954B /* Build configuration list for PBXNativeTarget "tochkatest" */;
 			buildPhases = (
+				02ABAC3EC9ECBEBA0D24513B /* [CP] Check Pods Manifest.lock */,
 				91575BCF22EAF97E0096954B /* Sources */,
 				91575BD022EAF97E0096954B /* Frameworks */,
 				91575BD122EAF97E0096954B /* Resources */,
+				83BE1B262A0B189061E5F721 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,12 +163,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91575BE422EAF97F0096954B /* LaunchScreen.storyboard in Resources */,
 				91575BE122EAF97F0096954B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02ABAC3EC9ECBEBA0D24513B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tochkatest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83BE1B262A0B189061E5F721 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tochkatest/Pods-tochkatest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tochkatest/Pods-tochkatest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tochkatest/Pods-tochkatest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91575BCF22EAF97E0096954B /* Sources */ = {
@@ -156,22 +223,12 @@
 				91575BF222EB317D0096954B /* TableViewCell.swift in Sources */,
 				91575BEE22EAFC780096954B /* MainViewController.swift in Sources */,
 				91575BFA22F21C470096954B /* ApiCommunication.swift in Sources */,
+				91D928C9237054F50025399C /* NewsApi.swift in Sources */,
 				91575BF622EF52280096954B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		91575BE222EAF97F0096954B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91575BE322EAF97F0096954B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		91575BE622EAF97F0096954B /* Debug */ = {
@@ -292,6 +349,7 @@
 		};
 		91575BE922EAF97F0096954B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D74340C5E1C92212402D2F3F /* Pods-tochkatest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,7 +358,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Home.tochkatest;
+				PRODUCT_BUNDLE_IDENTIFIER = Home.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,6 +367,7 @@
 		};
 		91575BEA22EAF97F0096954B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E082D3888F5AB76117AF60BD /* Pods-tochkatest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -317,7 +376,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Home.tochkatest;
+				PRODUCT_BUNDLE_IDENTIFIER = Home.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

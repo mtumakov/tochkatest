@@ -13,16 +13,41 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var container: NSPersistentContainer!
 
+    func createContainer(completion: @escaping (NSPersistentContainer) -> ()) {
+        let container = NSPersistentContainer(name: "tochkatest") //  класс хелпер, появился в иос 10 и создает разом весь необходимый стек
+        container.loadPersistentStores(completionHandler: { _, error in // пытаемся открыть файл базы данных, если он не найден, создаем его
+            guard error == nil else {
+                fatalError("Failed to load store")
+            }
+            DispatchQueue.main.async {
+                completion(container)
+            }
+        })
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController: UINavigationController = UINavigationController(rootViewController: MainViewController())
         self.window?.rootViewController = navigationController
         
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()
+        
+        createContainer { container in
+            self.container = container
+            
+            let vc = navigationController.topViewController as? MainViewController
+            vc?.context = container.viewContext
+//            if let nc = self.window?.rootViewController as? UINavigationController,
+//                let vc = nc.topViewController as? MainViewController {
+//                vc.context = container.viewContext
+//            }
+            
+        }
         return true
     }
 
